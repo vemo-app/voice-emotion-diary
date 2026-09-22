@@ -318,4 +318,4 @@ their file size.
 
 The model files can be downloaded from:
 
-[Download Model Weights](YOUR_LINK_HERE)
+[Download Model Weights](https://huggingface.co/maryamalikhasi/vemo-speech-emotion-recognition)

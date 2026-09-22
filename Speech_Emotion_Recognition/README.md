@@ -26,9 +26,9 @@ three main stages:
 2. **Data Augmentation:** Augmentation of ShEMO samples to simulate smartphone
    recording conditions, followed by partial fine-tuning of the pretrained model.
 
-3. **Real-World Data Adaptation:** Evaluation of different approaches using
-   real speech samples, including deep representations, acoustic features,
-   and partial fine-tuning.
+3. **Real-World Data Adaptation:** Evaluation of partial fine-tuning,
+   frozen deep representations, and a combination of deep and acoustic
+   features, using real speech samples.
 
 The final architecture was selected based on speaker-independent validation
 and was subsequently evaluated on a completely independent test set.
@@ -55,12 +55,6 @@ This evaluation was designed to examine how well the pretrained model generalize
 * **Macro F1-score:** 0.46
 
 The relatively low performance on the independent real-world dataset, compared with the performance reported for the model on its original data, indicated a substantial **domain and speaker generalization gap**.
-
-### References
-
-[1] m3hrdadfi, *"wav2vec2-xlsr-persian-speech-emotion-recognition."* [Online]. Available: https://huggingface.co/m3hrdadfi/wav2vec2-xlsr-persian-speech-emotion-recognition
-
-[2] O. Mohamad Nezami, P. Jamshid Lou, and M. Karami, *"ShEMO: A large-scale validated database for Persian speech emotion detection,"* Language Resources and Evaluation, vol. 53, no. 1, pp. 1–16, 2019.
 
 ---
 
@@ -148,7 +142,7 @@ The results showed that directly fine-tuning the model did not provide a reliabl
 
 **Directory:** [`02_deep_features`](./experiments/03_real_data/02_deep_features)
 
-In this approach, the pretrained Wav2Vec2 backbone was kept **frozen** and used as a feature extractor.
+In this approach, The Wav2Vec2 backbone obtained after the fine-tuning stage in Section 2 was kept frozen (its classification head was discarded), and used purely as a feature extractor.
 
 Deep speech representations were extracted from the real speech samples, and a Logistic Regression classifier was trained using these representations.
 
@@ -253,11 +247,10 @@ The final independent test performance was consistent with the approximately 70%
                     │  Emotion Prediction │
                     └─────────────────────┘
                                  │
-                 ┌───────────────┼───────────────┐
-                 ▼               ▼               ▼
-              Anger          Happiness         Sadness
+                 ┌───────────────┼───────────────┐───────────────┐
+                 ▼               ▼               ▼               ▼
+              Anger          Happiness         Sadness         Neutral
                                                  
-                              + Neutral
 ```
 
 ---
@@ -305,6 +298,16 @@ Each experiment is kept separately to preserve the development process and make 
 * The final frozen-backbone architecture with combined deep and acoustic features achieved **74% accuracy and 0.74 macro F1-score** on the independent test set.
 
 The experiments demonstrate the progression from a pretrained baseline to a model specifically adapted for VEMO's speech emotion recognition task.
+
+---
+
+### References
+
+[1] m3hrdadfi, *"wav2vec2-xlsr-persian-speech-emotion-recognition."* [Online]. Available: https://huggingface.co/m3hrdadfi/wav2vec2-xlsr-persian-speech-emotion-recognition
+
+[2] O. Mohamad Nezami, P. Jamshid Lou, and M. Karami, *"ShEMO: A large-scale validated database for Persian speech emotion detection,"* Language Resources and Evaluation, vol. 53, no. 1, pp. 1–16, 2019.
+
+[3] D. Snyder, G. Chen, and D. Povey, "MUSAN: A music, speech, and noise corpus," arXiv preprint arXiv:1510.08484, 2015.
 
 ---
 

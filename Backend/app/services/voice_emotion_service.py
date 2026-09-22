@@ -10,8 +10,15 @@ from transformers import Wav2Vec2FeatureExtractor, Wav2Vec2Model
 
 logger = logging.getLogger(__name__)
 
-AUDIO_ENCODER_PATH = os.getenv("VOICE_EMOTION_ENCODER_PATH", "/models/shemo_phase1_checkpoint")
-FINAL_CLASSIFIER_PATH = os.getenv("VOICE_EMOTION_CLASSIFIER_PATH", "/models/final_classifier_v2")
+AUDIO_ENCODER_PATH = os.getenv(
+    "VOICE_EMOTION_ENCODER_PATH",
+    "./ml_models/voice_emotion/phase1"
+)
+
+FINAL_CLASSIFIER_PATH = os.getenv(
+    "VOICE_EMOTION_CLASSIFIER_PATH",
+    "./ml_models/voice_emotion/phase2"
+)
 
 AUDIO_MODEL_LABEL_MAP = {
     "anger": "anger",

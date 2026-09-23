@@ -10,6 +10,8 @@ The encoder is used as a frozen feature extractor in the final VEMO voice emotio
 
 The model files are not included in this repository because of their size. They are hosted separately on Hugging Face.
 
+The encoder location is configured through the `VOICE_EMOTION_ENCODER_PATH` environment variable.
+
 ## Hugging Face
 
 The trained model components are available in the VEMO Hugging Face repository:

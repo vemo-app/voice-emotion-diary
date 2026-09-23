@@ -15,9 +15,10 @@ Expected files:
 ```text
 phase2/
 ├── logistic_classifier.joblib
-├── scaler.joblib
-└── metadata.json
+└── scaler.joblib
 ```
+
+The classifier location is configured through the `VOICE_EMOTION_CLASSIFIER_PATH` environment variable.
 
 These files are not included in this repository because model artifacts are stored separately on Hugging Face.
 

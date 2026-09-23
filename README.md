@@ -194,7 +194,7 @@ These results represent the evaluation of the respective components under the ex
 
 This project was developed collaboratively as a **Bachelor's thesis project** by:
 
-* **Maryam Alikhasi** — [@your-github-id](https://github.com/maryam-alikhasi)
-* **Fateme Jafari** — [@friend-github-id](https://github.com/Ftm-jfr)
+* [Maryam Alikhasi](https://github.com/maryam-alikhasi)
+* [Fateme Jafari](https://github.com/Ftm-jfr)
 
 Both authors contributed to the design, development, experimentation, and evaluation of the VEMO system.

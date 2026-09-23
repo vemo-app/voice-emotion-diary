@@ -8,7 +8,6 @@ Phase 2 consists of:
 
 * **Logistic Regression classifier**
 * **Feature scaler**
-* **Metadata**
 
 Expected files:
 

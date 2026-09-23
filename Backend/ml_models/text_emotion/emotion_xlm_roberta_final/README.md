@@ -18,9 +18,9 @@ The trained model is available in the VEMO Hugging Face repository:
 
 Expected model path:
 
-\`\`\`text
+```text
 ml_models/text_emotion/emotion_xlm_roberta_final/
-\`\`\`
+```
 
 The model location is configured through the `TEXT_EMOTION_MODEL_PATH` environment variable.
 
@@ -28,9 +28,9 @@ The model location is configured through the `TEXT_EMOTION_MODEL_PATH` environme
 
 If the downloaded checkpoint reports its classes as placeholder labels (`LABEL_0`, `LABEL_1`, ...) instead of actual class names, set the `TEXT_EMOTION_LABEL_OVERRIDE` environment variable to a JSON mapping, e.g.:
 
-\`\`\`bash
+```bash
 TEXT_EMOTION_LABEL_OVERRIDE='{"LABEL_0": "SAD", "LABEL_1": "NEUTRAL", "LABEL_2": "ANGRY", "LABEL_3": "HAPPY"}'
-\`\`\`
+```
 
 Without this mapping, if placeholder labels are detected, the service logs an error and all predictions default to `neutral`.
 

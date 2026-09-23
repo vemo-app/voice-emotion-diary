@@ -20,15 +20,16 @@ The model location is configured through the `STT_MODEL_NAME` environment variab
 
 The model is publicly available on the Hugging Face Hub. To download it into the expected path, run:
 
-\`\`\`bash
+```bash
 python -c "
 from huggingface_hub import snapshot_download
+
 snapshot_download(
     repo_id='openai/whisper-large-v3',
     local_dir='./ml_models/stt/whisper-large-v3',
 )
 "
-\`\`\`
+```
 
 The download is approximately 3GB and requires the `huggingface_hub` package (already included in `requirements.txt`).
 

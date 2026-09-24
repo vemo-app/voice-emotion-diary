@@ -30,6 +30,7 @@ Backend/
 ├── ml_models/
 │   ├── stt/
 │   │   ├── whisper-large-v3/
+│   │   │   └── .gitkeep
 │   │   └── README.md
 │   ├── voice_emotion/
 │   │   ├── phase1/
@@ -38,6 +39,7 @@ Backend/
 │   │       └── README.md
 │   └── text_emotion/
 │       ├── emotion_xlm_roberta_final/
+│       │   └── .gitkeep
 │       └── README.md
 │
 ├── .env.example

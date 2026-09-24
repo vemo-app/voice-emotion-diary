@@ -97,25 +97,25 @@ For each voice memory, the backend runs two independent paths in the background:
 Voice Memory
      │
      ├──────────────────────────────┐
-     ▼                               ▼
+     ▼                              ▼
 Speech Emotion                Speech-to-Text
 Recognition                   (Whisper Large V3)
-(runs directly on audio,             │
- independent of text)                ▼
+(runs directly on audio,            │
+ independent of text)               ▼
      │                        LLM-based Text
      │                        Correction
-     │                               │
-     │                               ▼
+     │                              │
+     │                              ▼
      │                        Text Emotion
      │                        Recognition
      │                               │
      └───────────────┬───────────────┘
-                      ▼
+                     ▼
            Raw Emotion Scores
         (stored separately per model,
            not merged at this stage)
-                      │
-                      ▼
+                     │
+                     ▼
       Combined on demand — when a memory
       is viewed, when a daily/weekly/monthly
       report is requested, or when an

@@ -152,32 +152,30 @@ At a high level, the VEMO pipeline can be summarized as:
 ```text
 Voice Memory
      │
-     ▼
-Whisper Large V3
-     │
-     ▼
-Speech-to-Text
-     │
-     ▼
-LLM-based Text Correction
-     │
-     ├──────────────────────┐
-     ▼                      ▼
-Text Emotion Model    Speech Emotion Model
-     │                      │
-     └──────────┬───────────┘
-                ▼
-       Emotion Analysis
-                │
-                ▼
-        LLM-based Response
-                │
-                ▼
-       Empathetic Response
-                │
-                ▼
-      Emotional Trend Analysis
-       Daily / Weekly / Monthly
+     ├──────────────────────────────┐
+     ▼                              ▼
+Speech Emotion                Speech-to-Text
+Recognition                   (Whisper Large V3)
+(runs directly on audio,            │
+ independent of text)               ▼
+     │                        LLM-based Text
+     │                        Correction
+     │                              │
+     │                              ▼
+     │                        Text Emotion
+     │                        Recognition
+     │                               │
+     └───────────────┬───────────────┘
+                     ▼
+           Raw Emotion Scores
+        (stored separately per model,
+           not merged at this stage)
+                     │
+                     ▼
+      Combined on demand — when a memory
+      is viewed, when a daily/weekly/monthly
+      report is requested, or when an
+      empathetic response is generated
 ```
 
 ## Results

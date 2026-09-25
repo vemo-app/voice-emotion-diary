@@ -266,6 +266,7 @@ Speech_Emotion_Recognition/
 │   │   └── evaluate.ipynb
 │   │
 │   ├── 02_data_augmentation/
+│   │   ├── augment_dataset.ipynb
 │   │   ├── train.ipynb
 │   │   └── evaluate.ipynb
 │   │

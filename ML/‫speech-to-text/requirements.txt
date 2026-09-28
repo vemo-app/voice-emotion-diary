@@ -1,0 +1,24 @@
+# Core
+numpy<2.2
+scipy
+torch
+pandas
+
+# Hugging Face stack
+transformers
+accelerate
+datasets
+
+# Speech / audio
+librosa
+soundfile
+jiwer
+noisereduce
+pyloudnorm
+nemo_toolkit[asr]
+
+# Persian text normalization
+hazm
+
+# Excel metadata support (pd.read_excel)
+openpyxl

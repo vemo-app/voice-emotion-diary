@@ -1,0 +1,6 @@
+model,wer_percent,accuracy_percent,valid_samples,total_samples,time_seconds
+openai/whisper-large-v3,35.33,64.67,112,112,285.9
+m3hrdadfi/wav2vec2-large-xlsr-persian-v3,37.51,62.49,112,112,27.3
+jonatasgrosman/wav2vec2-large-xlsr-53-persian,40.46,59.54,112,112,33.8
+vhdm/whisper-large-fa-v1,41.5,58.5,112,112,91.2
+nvidia/stt_fa_fastconformer_hybrid_large,43.97,56.03,112,112,29.7

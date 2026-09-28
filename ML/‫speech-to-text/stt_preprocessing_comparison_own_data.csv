@@ -1,0 +1,7 @@
+preprocessing,wer_percent,accuracy_percent,valid_samples,time_seconds
+loudness norm + trim (no denoise),34.28,65.72,112,218.7
+raw (resample+mono only),35.33,64.67,112,242.6
+loudness normalization only,35.71,64.29,112,243.2
+denoise only,35.9,64.1,112,226.4
+denoise + loudness + trim (all),36.18,63.82,112,224.2
+trim silence only,44.06,55.94,112,241.5

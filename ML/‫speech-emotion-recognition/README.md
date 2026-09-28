@@ -6,5 +6,5 @@ is available on Kaggle:
 
 https://www.kaggle.com/datasets/ftmjfr/shemo-augmented
 
-Derived from [ShEMO](https://github.com/pariajm/ShEMO) (Mohamad Nezami et al., 2019),
+Derived from [ShEMO](https://arxiv.org/abs/1906.01155) (Mohamad Nezami et al., 2019),
 used here for academic purposes.

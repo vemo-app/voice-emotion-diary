@@ -73,6 +73,14 @@ The augmentation process was applied to the ShEMO samples belonging to the four 
 
 The resulting training data contained **both the original ShEMO samples and their augmented versions**.
 
+### Dataset
+
+The combined dataset containing the original ShEMO samples and their augmented versions is available on Kaggle:
+
+**[VEMO Speech Emotion Augmented Dataset](https://www.kaggle.com/datasets/ftmjfr/shemo-augmented)**
+
+The dataset includes metadata for both original and augmented samples, including the audio path, speaker ID, gender, emotion label, and augmentation status.
+
 ### Augmentation Pipeline
 
 The augmentation pipeline was designed to simulate common variations introduced by smartphone recording environments. The following transformations were applied independently with predefined probabilities, allowing different combinations of transformations to be generated for different samples:

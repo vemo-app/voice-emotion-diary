@@ -25,10 +25,10 @@ the model is used in production.
 
 ```
 Text_Emotion_Recognition/
-├── 01_parsbert_baseline.ipynb
-├── 02_xlm_roberta_arman.ipynb
-├── 03_finetune_xlm_roberta_large_on_own_data.ipynb
-├── 04_evaluate_final_model.ipynb
+├── parsbert_baseline.ipynb
+├── xlm_roberta_arman.ipynb
+├── finetune_xlm_roberta_large_on_own_data.ipynb
+├── evaluate_final_model.ipynb
 └── README.md
 ```
 

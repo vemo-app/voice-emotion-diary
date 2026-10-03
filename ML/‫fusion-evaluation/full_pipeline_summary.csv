@@ -1,0 +1,2 @@
+num_samples,stt_wer_percent,stt_accuracy_percent,text_emotion_accuracy_percent,text_emotion_macro_f1_percent,voice_emotion_accuracy_percent,voice_emotion_macro_f1_percent,text_voice_agreement_percent,combined_accuracy_percent,combined_macro_f1_percent
+93,34.19,65.81,81.72,81.93,74.19,74.01,70.97,82.8,82.91

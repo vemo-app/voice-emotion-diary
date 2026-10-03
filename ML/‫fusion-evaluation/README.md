@@ -9,7 +9,7 @@ works compared to either alone.
 
 ```
 fusion-evaluation/
-├── fusion_evaluation.ipynb
+├── evaluation.ipynb
 ├── full_pipeline_results.csv      # per-sample predictions, all stages
 ├── reference_vs_predicted.csv     # per-sample comparison + error flags
 ├── full_pipeline_summary.csv      # single-row summary of all metrics

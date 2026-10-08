@@ -70,27 +70,38 @@ The real-world speech samples collected by the project team are **not publicly r
 ## Repository Structure
 
 ```text
-VEMO/
+voice-emotion-diary/
 │
-├── Backend/
-│   ├── app/
-│   ├── alembic/
-│   ├── media/
-│   ├── ml_models/
-│   ├── .env.example
-│   ├── requirements.txt
-│   └── README.md
+├── app/                              # Flutter mobile/web app
+│   ├── android/                      # Android platform configuration
+│   ├── web/                          # Web platform configuration
+│   ├── lib/                          # Application source code (Dart)
+│   ├── assets/
+│   │   └── icon/                     # App icons
+│   ├── analysis_options.yaml         # Dart/Flutter lint rules
+│   ├── l10n.yaml                     # Localization configuration
+│   ├── pubspec.yaml                  # Flutter dependencies
+│   ├── pubspec.lock
+│   ├── .gitignore
+│   └── README.md                     # App setup and run instructions
 │
-├── Frontend/
-│   └── ...
+├── Backend/                          # API server
+│   ├── alembic/                      # Database migrations
+│   ├── app/                          # Backend application code
+│   ├── media/                        # Uploaded voice recordings
+│   ├── ml_models/                    # Model files used at inference
+│   ├── .env.example                  # Example environment variables
+│   ├── requirements.txt              # Python dependencies
+│   └── README.md                     # Backend setup and API docs
 │
-├── Speech_Emotion_Recognition/
-│   ├── experiments/
-│   └── README.md
+├── ML/                               # Machine learning experiments and training
+│   ├── speech-to-text/               # Speech recognition (transcription) experiments
+│   ├── text-emotion-recognition/     # Text-based emotion model
+│   ├── speech-emotion-recognition/   # Audio-based emotion model (ShEMO, augmentation)
+│   ├── fusion-evaluation/            # Evaluation of the combined (text + speech) pipeline
+│   └── README.md                     # Overview of the ML components
 │
-└── Text_Emotion_Recognition/
-    ├── ...
-    └── README.md
+└── README.md                         # Project overview, architecture, setup
 ```
 
 ### `Backend`

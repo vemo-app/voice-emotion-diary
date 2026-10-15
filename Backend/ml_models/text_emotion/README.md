@@ -4,22 +4,53 @@ This directory contains the text-based emotion recognition model used by the VEM
 
 ## Model
 
-VEMO uses a **fine-tuned XLM-RoBERTa** model for text emotion classification.
+VEMO uses a **fine-tuned XLM-RoBERTa-large** model for Persian text emotion classification.
 
-The model was fine-tuned on a combination of custom-labeled data and the Arman emotion dataset, and its output taxonomy was reduced to four classes (`anger`, `happiness`, `sadness`, `neutral`) to match the voice emotion model's supported classes.
+The model was developed in two fine-tuning stages:
 
-The model files are not included in this repository because of their size. They are hosted separately on Hugging Face.
+1. **Stage 1:** Fine-tuned on [ArmanEmo](https://github.com/Arman-Rayan-Sharif/arman-text-emotion), a public Persian text emotion dataset.
+2. **Stage 2:** Further fine-tuned on a custom dataset of 615 labeled Persian text samples to better adapt the model to informal, spoken-style text.
 
-## Hugging Face
+The model supports four unified emotion classes:
 
-The trained model is available in the VEMO Hugging Face repository:
+- `anger`
+- `happiness`
+- `sadness`
+- `neutral`
 
-[Download trained model]()
+Its original seven-class output is mapped to these four classes, with `hate` mapped to `anger`, `fear` mapped to `sadness`, and `surprise` mapped to `neutral`.
 
-Expected model path:
+## Model Weights
+
+The trained models are hosted on Hugging Face and are not included directly in this repository.
+
+- **Base model (Stage 1):** [maryamalikhasi/text-emotion-xlm-roberta-large](https://huggingface.co/maryamalikhasi/text-emotion-xlm-roberta-large)
+- **Final model (Stage 2):** [ftmjfr/VEMO-final-text-emotion-recognition](https://huggingface.co/ftmjfr/VEMO-final-text-emotion-recognition)
+
+The backend uses the final model for text emotion recognition.
+
+## Label Mapping
+
+Some model checkpoints may expose their output classes using placeholder labels such as `LABEL_0`, `LABEL_1`, and so on, rather than descriptive emotion names.
+
+If the loaded checkpoint uses placeholder labels, the `TEXT_EMOTION_LABEL_OVERRIDE` environment variable can be used to provide an explicit JSON mapping. For example:
+
+```bash
+TEXT_EMOTION_LABEL_OVERRIDE='{"LABEL_0": "SAD", "LABEL_1": "NEUTRAL", "LABEL_2": "ANGRY", "LABEL_3": "HAPPY"}'
+```
+
+The mapping must match the actual class-to-index order of the loaded checkpoint. If placeholder labels are detected and no valid mapping is provided, the service logs an error and defaults predictions to `neutral`.
+
+## Download the Model
+
+Download the final fine-tuned model from Hugging Face:
+
+**[VEMO Final Text Emotion Recognition](https://huggingface.co/ftmjfr/VEMO-final-text-emotion-recognition)**
+
+After downloading the model files, place them in the following directory:
 
 ```text
-ml_models/text_emotion/emotion_xlm_roberta_final/
+Backend/ml_models/text_emotion/emotion_xlm_roberta_final/
 ```
 
 The model location is configured through the `TEXT_EMOTION_MODEL_PATH` environment variable.

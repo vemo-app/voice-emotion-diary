@@ -246,7 +246,7 @@ The real-world speech samples collected during the development of the Speech Emo
 
 For details about the machine learning development process, see:
 
-* `Speech_Emotion_Recognition/` — Speech emotion recognition experiments and model development
-* `Text_Emotion_Recognition/` — Text emotion recognition experiments and model development
+* `ML/speech_emotion_recognition/` — Speech emotion recognition experiments and model development
+* `ML/text_emotion_recognition/` — Text emotion recognition experiments and model development
 
 The main project documentation is available in the root `README.md`.

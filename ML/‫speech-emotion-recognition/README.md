@@ -216,7 +216,7 @@ The final model was then evaluated on the independent test set containing **93 s
 
 ### Final Independent Test Result
 
-* **Accuracy:** 74%
+* **Accuracy:** 74.19%
 * **Macro Precision:** 0.75
 * **Macro Recall:** 0.74
 * **Macro F1-score:** 0.74
@@ -304,7 +304,7 @@ Each experiment is kept separately to preserve the development process and make 
 * Using Wav2Vec2 as a frozen feature extractor provided a substantial improvement.
 * Combining deep speech representations with acoustic features further improved speaker-independent validation performance.
 * Partial fine-tuning performed less reliably than using a frozen backbone.
-* The final frozen-backbone architecture with combined deep and acoustic features achieved **74% accuracy and 0.74 macro F1-score** on the independent test set.
+* The final frozen-backbone architecture with combined deep and acoustic features achieved **74.19% accuracy and 0.74 macro F1-score** on the independent test set.
 
 The experiments demonstrate the progression from a pretrained baseline to a model specifically adapted for VEMO's speech emotion recognition task.
 

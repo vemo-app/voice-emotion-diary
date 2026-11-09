@@ -191,13 +191,14 @@ Recognition                   (Whisper Large V3)
 
 ## Results
 
-| Component                  | Evaluation Metric |     Result |
-| -------------------------- | ----------------: | ---------: |
-| Speech Emotion Recognition |          Accuracy |    **74%** |
-| Text Emotion Recognition   |          Accuracy |    **88%** |
-| Speech-to-Text             |               WER | **34.28%** |
+End-to-end evaluation on 93 real phone recordings from 22 unseen speakers.
 
-These results represent the evaluation of the respective components under the experimental settings described in their dedicated repositories and documentation.
+| Component                   | Accuracy (%) | Macro-F1 (%) | WER (%) |
+| --------------------------- | -----------: | -----------: | ------: |
+| Speech Emotion Recognition  |        74.19 |        74.01 |       - |
+| Text Emotion Recognition    |        81.72 |        81.93 |       - |
+| **Fusion (simple average)** |    **82.80** |    **82.91** |       - |
+| Speech-to-Text              |            - |            - |   34.19 |
 
 ## Authors
 

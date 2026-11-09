@@ -104,44 +104,6 @@ voice-emotion-diary/
 └── README.md                         # Project overview, architecture, setup
 ```
 
-### `Backend`
-
-Contains the server-side implementation of VEMO, including:
-
-* API endpoints
-* Database models and migrations
-* Application services
-* Background workers
-* Machine learning model integration
-* Media storage
-* Authentication and configuration
-
-The `ml_models/` directory contains the expected structure for locally available model artifacts. Large model files are stored separately rather than committed to the Git repository.
-
-### `Frontend`
-
-Contains the client-side application used to interact with VEMO, including the user interface for:
-
-* Recording and managing memories
-* Viewing memory content and emotions
-* Receiving empathetic responses
-* Exploring emotional trends and analyses
-
-### `Speech_Emotion_Recognition`
-
-Contains the experiments and development process for VEMO's speech emotion recognition model, including:
-
-* Pretrained baseline evaluation
-* Data augmentation experiments
-* Fine-tuning experiments
-* Deep feature extraction
-* Acoustic feature analysis
-* Final model development and evaluation
-
-### `Text_Emotion_Recognition`
-
-Contains the experiments and development process for VEMO's text emotion recognition model.
-
 ## Technology Stack
 
 VEMO combines several AI and software technologies, including:
